@@ -1,0 +1,42 @@
+﻿<Window x:Class="MusicStreamWPF.LoginPages.RegistrationPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicStreamWPF.LoginPages"
+        mc:Ignorable="d"
+        Title="RegistrationPage" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF7400EA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" x:Name="CorpStack">
+            <StackPanel>
+                <Button  Height="121" Width="212">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/images/aye.jpg"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="RegistrarionStack" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" >
+
+
+            <Label Content="Логин" HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="Black" />
+            <TextBox Foreground="DarkGray" x:Name="LoginTextbox"  />
+            <Label Content="Пароль" HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="Black" />
+            <TextBox Foreground="DarkGray" x:Name="PasswordTextBox"  />
+            <Label Content="Повторите пароль" HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="Black" />
+            <TextBox Foreground="DarkGray" x:Name="SecondPasswordTextBox"  />
+            <StackPanel HorizontalAlignment="Center">
+                <Label Foreground="Red" x:Name="ErrorLabel" FontFamily="Bold"></Label>
+            </StackPanel>
+            <Button Click="CreateAcc" Background="#FF7A00F7" Height="39" Content="Зарегистрировать"  Margin="10" Foreground="White" BorderBrush="Black" Width="110"></Button>
+
+        </StackPanel>
+    </Grid>
+</Window>

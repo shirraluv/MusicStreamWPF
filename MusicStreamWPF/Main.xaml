@@ -1,0 +1,72 @@
+﻿<Page x:Class="MusicStreamWPF.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:uc="clr-namespace:MusicStreamWPF.UserControls"
+     Height="700" Width="830"
+      Background="Transparent">
+    <Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="1" Background="White" Margin="40 60 10 0">
+        <TextBlock Text="Меню" Style="{StaticResource titleText}"/>
+        <Border CornerRadius="20" Margin="0 20 0 0">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#30ad9a" Offset="0"/>
+                    <GradientStop Color="#18c274" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.4" Color="#1fae7e"/>
+            </Border.Effect>
+            <Grid>
+                <Border Opacity="0.07" CornerRadius="20">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/images/lol-trophy.jpg"/>
+                    </Border.Background>
+                </Border>
+
+                <StackPanel Margin="30">
+                    <TextBlock Text="Лучшие хиты" Foreground="White" FontSize="26" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding Top1}" Foreground="#c0e6de" FontSize="17" FontWeight="SemiBold" Margin="0 10 0 20"/>
+
+                    <uc:SongItemMain Number="01" Title="{Binding first}" Duration="{Binding firstd}"/>
+                    <uc:SongItemMain Number="02" Title="{Binding second}" Duration="{Binding secondd}"/>
+                    <uc:SongItemMain Number="03" Title="{Binding third}" Duration="{Binding thirdd}"/>
+                    <uc:SongItemMain Number="04" Title="{Binding fourth}" Duration="{Binding fourthd}"/>
+                    <uc:SongItemMain Number="05" Title="{Binding fifth}" Duration="{Binding fifthd}"/>
+                    <uc:SongItemMain Number="06" Title="{Binding sixth}" Duration="{Binding sixthd}"/>
+                    <uc:SongItemMain Number="07" Title="{Binding seventh}" Duration="{Binding seventhd}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </StackPanel>
+
+
+    <!-- ЧУТЬ ПРАВЕЕ ЧУВАК -->
+    <Border Grid.Column="2" CornerRadius="0 40 0 0" Background="White" Margin="0 22 0 0">
+        <StackPanel Margin="30 50 30 0">
+            <TextBlock Text="Топ артистов" Style="{StaticResource titleText}" Margin="0 0 0 10" FontSize="28"/>
+            <uc:TopItemMain Title="1" Duration="1" Image="/images/sss.jpg"/>
+            <uc:TopItemMain Title="1" Duration="1" Image="/images/sss.jpg"/>
+            <uc:TopItemMain Title="1" Duration="1" Image="/images/sss.jpg"/>
+            <TextBlock Text="Топ альбомов" Style="{StaticResource titleText}" Margin="0 30 0 20" FontSize="24"/>
+            <uc:TopAlbums Title="1" Desc="1" Image="/images/sss.jpg"/>
+            <uc:TopAlbums Title="1" Desc="1" Image="/images/sss.jpg"/>
+        </StackPanel>
+    </Border>
+
+    
+    </Grid>
+    </Border>
+</Page>
